@@ -1,5 +1,8 @@
 Connect to Mongog db
 mongosh mongodb://localhost:27017
+Note:
+
+MongoDB scripts are case-sensitive — for database names, collection names, field names, and commands.
 #########################################################
 1) Check the Current database name 
 > db
@@ -42,4 +45,32 @@ db.dropDatabase()
 
 >cls
 
-8) Get table/collection list
+9) Get table/collection list
+First need to switch to the database 
+Command 
+> show collections
+> show tables
+> db.getCollectionNames()
+
+10)	Rename collection
+db.collection. renameCollection("")
+
+db.examples.renameCollection("example")
+
+11)	Drop Collection
+db.collectionName.drop()
+db.emp.drop()
+
+12)	Help 
+db.help()
+
+13)	Database details
+ This will show the database name, number of collection and documents in the database
+ >db.stats()
+
+14)	Select/Find/Project Records
+
+select all records of emp
+db.emp.find()
+select the employee whose id =123
+db.emp.find({empno:7788})
