@@ -1,0 +1,45 @@
+Connect to Mongog db
+mongosh mongodb://localhost:27017
+#########################################################
+1) Check the Current database name 
+> db
+tell the curent database name
+
+2) Select/Display all databse in Mongo Db server
+
+> show dbs
+
+3) Use the database 
+> use dbname
+use test
+ 
+4)	Creating Databases
+use <DB_Name>
+use Northwind
+It switches to the mydb database, but does not actually create it until you store data in it.
+That’s why it doesn't appear in show dbs.
+
+5)  Create collection
+db.createCollection("users")
+
+6)  Insert data to collection
+db.users.insertMany([
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 35 }
+])
+
+db.users.insertOne({
+  name: "Alice",
+  age: 30,
+  role: "admin"
+})
+
+7)	Drop a Database . permanently delete database
+use yourDatabaseName
+db.dropDatabase()
+
+8) Clear the terminal 
+
+>cls
+
+8) Get table/collection list
