@@ -74,3 +74,8 @@ select all records of emp
 db.emp.find()
 select the employee whose id =123
 db.emp.find({empno:7788})
+db.emp.find({deptno:10})
+db.emp.find({deptno: {$lte: 30}})
+db.emp.find({deptno: {$gte: 30}})
+db.emp.find({deptno: {$gt:20}})
+db.emp.find({deptno: {$lt:10}})
