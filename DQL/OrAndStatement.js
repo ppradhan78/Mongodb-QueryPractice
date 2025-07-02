@@ -1,0 +1,1 @@
+db.users.find({ $or: [{ deptNo: 10 }, { roleId: {  $lte:2 } }] })

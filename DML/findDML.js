@@ -23,7 +23,7 @@ db.collection.findOneAndUpdate(
 )
 */
 
-db.emp1.findOneAndUpdate(
+db.emp.findOneAndUpdate(
     { name: "Alice Khan" },
     { $set: { email: "alice.khan@wellsfargo.com" } }
 )
