@@ -72,10 +72,57 @@ db.help()
 
 select all records of emp
 db.emp.find()
-select the employee whose id =123
+find the record based on Id
 db.emp.find({empno:7788})
 db.emp.find({deptno:10})
+find the record based on Id grater than/less than/ equal
 db.emp.find({deptno: {$lte: 30}})
 db.emp.find({deptno: {$gte: 30}})
 db.emp.find({deptno: {$gt:20}})
 db.emp.find({deptno: {$lt:10}})
+find the record count of a collection
+db.employee.find().count()
+db.emp.find({ "deptno":10} ).count()
+Sort/Order by
+db.collection.find().sort({ field: 1 })   // Ascending
+db.collection.find().sort({ field: -1 })  // Descending
+db.emp.find().sort({"deptno":-1})
+db.emp.find().sort({"deptno":1})
+1 to sort in ascending order and -1 in descending order.
+other than the value Invalid sort direction
+db.emp.find().sort({ deptno: 1,ename: -1 })
+With limit() and skip()
+Sorting is often used with limit() and skip() for pagination:
+db.emp.find().sort({ deptno: 1 }).skip(2).limit(2)
+Retrieve Distinct
+Get unique records.
+db.collectionName.distinct(field)
+db.emp.distinct("sal")
+Like Search
+db.emp.find({"ename": /J/})
+############
+db.emp.find({}, { _id:0,EmpId :1,Ename:1,Sal:1})
+1-display, 0-hide
+26.	Remove All Documents
+db.collection.remove({})
+
+
+
+
+
+
+Creating Indexes in Mongo DB
+o	Multiple Records - Insert multiple new documents into the collection.
+db.collection-name.insertMany( [{"key":"value,....}]);
+15.	Command Update Documents in Mongo DB
+16.	Delete Documents in Mongo DB
+db.mycoll.findOneAndDelete( filter, <optional params> )
+db.mycoll.findOneAndReplace( filter, replacement, <optional params> )
+db.mycoll.findOneAndUpdate( filter, <update object or pipeline>, <optional params> )
+Differences between find () and findone()
+Aggregation operations
+And Or Operator 
+Inbuilt function 
+Common Mongo DB Query in interview 
+15.	Command Update Documents in Mongo DB
+16.	Delete Documents in Mongo DB
