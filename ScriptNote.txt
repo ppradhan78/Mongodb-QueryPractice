@@ -124,5 +124,3 @@ Aggregation operations
 And Or Operator 
 Inbuilt function 
 Common Mongo DB Query in interview 
-15.	Command Update Documents in Mongo DB
-16.	Delete Documents in Mongo DB
